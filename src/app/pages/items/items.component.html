@@ -1,0 +1,10 @@
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="!isLoading && items.length === 0">No items found.</div>
+<ul *ngIf="!isLoading">
+  <li *ngFor="let item of items">
+    <h3>Item: {{ item.name }}</h3>
+    <p>Descrição: {{ item.description }}</p>
+    <p>Preço: ${{ item.price }}</p>
+    <p *ngIf="item.category">Categoria: {{ item.category.name }} </p>
+  </li>
+</ul>

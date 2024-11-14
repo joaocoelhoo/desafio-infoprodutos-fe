@@ -1,0 +1,17 @@
+<h1>Gerenciar Itens</h1>
+<div>
+  <h2>Adicionar Novo Item</h2>
+  <input [(ngModel)]="newItem.name" placeholder="Nome" />
+  <input [(ngModel)]="newItem.description" placeholder="Descrição" />
+  <input [(ngModel)]="newItem.price" type="decimal" placeholder="Preço" />
+  <button (click)="add()">Adicionar Item</button>
+</div>
+
+<h2>Lista de Itens</h2>
+<div *ngFor="let item of items">
+  <input [(ngModel)]="item.name" placeholder="Nome" />
+  <input [(ngModel)]="item.description" placeholder="Descrição" />
+  <input [(ngModel)]="item.price" type="decimal" placeholder="Preço" />
+  <button (click)="update(item)">Atualizar</button>
+  <button (click)="delete(item.id)">Excluir</button>
+</div>
