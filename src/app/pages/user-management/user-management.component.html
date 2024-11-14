@@ -1,18 +1,18 @@
-<h1>Gerenciar Usuários</h1>
+<h1>Manage Users</h1>
 
 <div>
-  <h2>Adicionar Novo Usuário</h2>
-  <input [(ngModel)]="newUser.name" placeholder="Nome" />
+  <h2>Add New User</h2>
+  <input [(ngModel)]="newUser.name" placeholder="Name" />
   <input [(ngModel)]="newUser.email" placeholder="Email" type="email"/>
   <input [(ngModel)]="newUser.password" type="password" placeholder="Password" />
-  <button (click)="add()">Adicionar Usuário</button>
+  <button (click)="add()">Add User</button>
 </div>
 
-<h2>Lista de Usuários</h2>
+<h2>User List</h2>
 <div *ngFor="let user of users">
-  <p>ID: {{ user.id }} - Nome: {{ user.name }} - Email: {{ user.email }}</p>
-  <input [(ngModel)]="user.name" placeholder="Nome" />
+  <p>ID: {{ user.id }} - Name: {{ user.name }} - Email: {{ user.email }}</p>
+  <input [(ngModel)]="user.name" placeholder="Name" />
   <input [(ngModel)]="user.email" placeholder="Email" />
-  <button (click)="update(user)">Atualizar Usuário</button>
-  <button (click)="deleteUser(user.id)">Excluir Usuário</button>
+  <button (click)="update(user)">Update User</button>
+  <button (click)="deleteUser(user.id)">Delete User</button>
 </div>
